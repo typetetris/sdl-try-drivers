@@ -6,6 +6,11 @@ build-type: Simple
 synopsis: small testing tool for sdl2 and accelerated drivers
 license: MIT
 license-file: LICENSE
+category: graphics
+maintainer: Eric Wolf <ericwolf42@gmail.com>
+description:
+  For each reported driver sdl-try-drivers tries to create a renderer
+  and reports success or failure with the catched exception.
 
 
 executable sdl-try-drivers
