@@ -22,6 +22,9 @@ tryRenderDriver :: Window -> (CInt, RendererInfo) -> IO (Maybe Renderer)
 tryRenderDriver window (idx, info) = catch (do
         putStrLn "== trying driver:"
         myPPrint info
+        -- if idx is given, defaultRenderer is ignored
+        -- the documentation of the haskell packages sdl2 doesn't mention this
+        -- but the sdl2 documentation itself does, see: https://wiki.libsdl.org/SDL_CreateRenderer
         renderer <- createRenderer window idx defaultRenderer
         putStrLn "** success"
         return (Just renderer))
@@ -33,7 +36,7 @@ tryRenderDriver window (idx, info) = catch (do
 checkRenderDrivers :: Window -> IO ()
 checkRenderDrivers window = do
   drivers <- zip [0 ..] <$> getRenderDriverInfo
-  putStrLn ("there are" ++ show (length drivers) ++ " drivers to check")
+  putStrLn ("there are " ++ show (length drivers) ++ " drivers to check")
   mapM_ (checkRenderDriver window) drivers
 
 main :: IO ()
