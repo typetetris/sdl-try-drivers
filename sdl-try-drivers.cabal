@@ -17,7 +17,7 @@ executable sdl-try-drivers
         hs-source-dirs: .
         main-is: Main.hs
         default-language: Haskell2010
-        ghc-options: -fwarn-tabs -Wall -O2 -threaded -rtsopts
+        ghc-options: -fwarn-tabs -Wall
         build-depends:
                 base == 4.*
               , sdl2
