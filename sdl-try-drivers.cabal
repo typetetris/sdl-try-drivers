@@ -8,6 +8,7 @@ license: MIT
 license-file: LICENSE
 category: graphics
 maintainer: Eric Wolf <ericwolf42@gmail.com>
+extra-source-files: README.md
 description:
   For each reported driver sdl-try-drivers tries to create a renderer
   and reports success or failure with the catched exception.
