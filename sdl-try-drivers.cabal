@@ -1,6 +1,6 @@
 name: sdl-try-drivers
 author: Eric Wolf
-version: 0.0.0.1
+version: 0.0.0.2
 cabal-version: >=1.10
 build-type: Simple
 synopsis: small testing tool for sdl2 and accelerated drivers
