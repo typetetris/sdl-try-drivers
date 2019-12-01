@@ -13,6 +13,9 @@ description:
   For each reported driver sdl-try-drivers tries to create a renderer
   and reports success or failure with the catched exception.
 
+source-repository head
+        type: git
+        location: https://github.com/typetetris/sdl-try-drivers
 
 executable sdl-try-drivers
         hs-source-dirs: .
